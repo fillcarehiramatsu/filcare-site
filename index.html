@@ -503,32 +503,111 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+
+    /* ── HAMBURGER ── */
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      gap: 5px; cursor: pointer; padding: 4px;
+      background: none; border: none; z-index: 201;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--accent-dk); border-radius: 2px;
+      transition: all .3s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── MOBILE MENU ── */
+    .mobile-menu {
+      display: none; position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: rgba(247,249,247,.98);
+      backdrop-filter: blur(20px);
+      z-index: 198; padding: 0 1.5rem 1.5rem;
+      border-bottom: 1px solid rgba(143,191,154,.25);
+      box-shadow: 0 8px 32px rgba(0,0,0,.08);
+    }
+    .mobile-menu.open { display: block; animation: mobileMenuIn .25s ease forwards; }
+    @keyframes mobileMenuIn {
+      from { transform: translateY(-8px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
+    }
+    .mobile-menu ul { list-style: none; padding: 0; margin: 0; }
+    .mobile-menu ul li a {
+      display: block; padding: 1rem 0;
+      font-size: .97rem; color: var(--text);
+      text-decoration: none; font-weight: 400;
+      border-bottom: 1px solid rgba(143,191,154,.18);
+      transition: color .2s;
+    }
+    .mobile-menu ul li:last-child a { border-bottom: none; }
+    .mobile-menu ul li a:hover { color: var(--accent-dk); }
+    .mobile-menu-bottom {
+      margin-top: 1.2rem; display: flex; flex-direction: column; gap: .7rem;
+    }
+    .mobile-menu-tel {
+      text-align: center; font-size: .9rem; color: var(--text-lt); font-weight: 500;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 860px) {
       nav { padding: 0 1.2rem; }
       .nav-links { display: none; }
-      .features-grid, .staff-grid, .cases-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
+      .nav-tel  { display: none; }
+      .nav-cta  { display: none; }
+      .nav-hamburger { display: flex; }
+      .sec { padding: 4rem 1.4rem; }
+      .features-grid, .staff-grid, .cases-grid { grid-template-columns: 1fr; max-width: 460px; margin-left: auto; margin-right: auto; }
       .symptoms-grid { grid-template-columns: repeat(2,1fr); }
       .area-grid { grid-template-columns: 1fr; }
-      .contact-info-row { grid-template-columns: 1fr; max-width: 340px; }
+      .contact-info-row { max-width: 100%; }
       .footer-top { flex-direction: column; gap: 1rem; }
       .footer-nav { justify-content: center; }
-      .pricing-tabs { flex-wrap: wrap; }
+      .pricing-tabs { flex-wrap: wrap; gap: .4rem; }
+      .ptab { font-size: .78rem; padding: .5rem 1rem; }
       .price-table { font-size: .78rem; }
-      .price-table th, .price-table td { padding: .7rem .8rem; }
+      .price-table th, .price-table td { padding: .7rem .6rem; }
+      .hero-btns { padding: 1.2rem 1rem; gap: .7rem; }
+      .btn-solid, .btn-outline, .btn-line { padding: .8rem 1.6rem; font-size: .87rem; }
+      .tile { padding: 4rem 1.4rem; }
+      footer { padding: 1.2rem 1.4rem; }
     }
     @media (max-width: 680px) {
+      .sec { padding: 3.5rem 1.2rem; }
+      .tile { padding: 3.5rem 1.2rem; }
       .jiritsu-steps { grid-template-columns: repeat(2,1fr); }
       .compare-wrap { grid-template-columns: 1fr; }
       .compare-arrow { transform: rotate(90deg); }
       .price-per-visit { grid-template-columns: 1fr; }
       .mc-grid { grid-template-columns: 1fr; }
       .js-caps { grid-template-columns: repeat(2,1fr); }
+      .area-grid { gap: 2.5rem; }
+      .contact-info-row { grid-template-columns: repeat(2,1fr) !important; }
+      .philosophy-quote { padding: 2rem 1.5rem; }
+      .jiritsu-banner { flex-direction: column; gap: .8rem; }
+      .price-table { display: block; overflow-x: auto; white-space: nowrap; }
     }
     @media (max-width: 520px) {
+      .sec { padding: 3rem 1rem; }
+      .tile { padding: 3rem 1rem; }
       .symptoms-grid { grid-template-columns: 1fr; }
       .fill-care-meaning { flex-direction: column; }
       .fcm-divider { transform: rotate(90deg); }
+      .contact-info-row { grid-template-columns: 1fr !important; max-width: 100% !important; }
+      .contact-btns { flex-direction: column; align-items: stretch; }
+      .contact-btns a { text-align: center; justify-content: center; }
+      .hero-btns { flex-direction: column; align-items: stretch; }
+      .hero-btns a { text-align: center; justify-content: center; }
+      .jiritsu-steps { grid-template-columns: 1fr; }
+      .features-grid { max-width: 100%; }
+      .cases-grid { max-width: 100%; }
+      .area-row { flex-direction: column; gap: .4rem; }
+      .area-label { width: auto; }
+      .nav-logo { font-size: .95rem; }
+      .announce { font-size: .67rem; }
+      .dx-section { padding: 2.5rem 1rem; }
     }
   </style>
 </head>
@@ -557,8 +636,28 @@
   <div class="nav-right">
     <span class="nav-tel">0774-46-8711</span>
     <a href="#contact" class="nav-cta">無料相談</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#philosophy" class="mobile-link">想い</a></li>
+    <li><a href="#symptoms"   class="mobile-link">対応症状</a></li>
+    <li><a href="#features"   class="mobile-link">特徴</a></li>
+    <li><a href="#cases"      class="mobile-link">利用例</a></li>
+    <li><a href="#pricing"    class="mobile-link">料金</a></li>
+    <li><a href="#area"       class="mobile-link">エリア</a></li>
+    <li><a href="#contact"    class="mobile-link">お問い合わせ</a></li>
+  </ul>
+  <div class="mobile-menu-bottom">
+    <div class="mobile-menu-tel">📞 0774-46-8711</div>
+    <a href="#contact" class="btn-solid mobile-link" style="text-align:center;justify-content:center">無料相談・お問い合わせ</a>
+  </div>
+</div>
 
 <!-- HERO：アップロード画像をトップに表示 -->
 <section class="hero">
@@ -973,6 +1072,36 @@
       setTimeout(() => el.classList.add('on'), 50);
     });
   }
+
+  // ── ハンバーガーメニュー ──
+  const hamburger  = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // リンクをタップしたらメニューを閉じる
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // メニュー外タップで閉じる
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('open') &&
+        !mobileMenu.contains(e.target) &&
+        !hamburger.contains(e.target)) {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
 </script>
 </body>
 </html>
