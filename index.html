@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="google-site-verification" content="FWC53oYWgwc4GhUAYoTv4p_JdzdacnjkHbptZa-mks8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>訪問看護ステーション フィルケア | 精神科訪問看護 宇治市・城陽市・久御山町・伏見区</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
@@ -504,6 +505,98 @@
     }
 
 
+
+
+    /* ── ABOUT TEASER ── */
+    .about-teaser-cards {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1.4rem;
+      margin: 0 auto; max-width: 820px;
+    }
+    .atc-card {
+      background: #fff; border-radius: 16px; padding: 2rem 1.6rem; text-align: center;
+      border: 1px solid rgba(143,191,154,.2);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .atc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(111,175,125,.15); }
+    .atc-icon { font-size: 2.2rem; display: block; margin-bottom: .8rem; }
+    .atc-title { font-size: .97rem; font-weight: 600; color: var(--accent-dk); margin-bottom: .5rem; }
+    .atc-body  { font-size: .8rem; line-height: 1.85; color: var(--text-lt); font-weight: 300; }
+
+    /* ── ABOUT ── */
+    .about-section { background: var(--bg); }
+    .about-sub-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.1rem, 2.2vw, 1.6rem); font-weight: 300;
+      color: #2e4a32; margin-bottom: 1.5rem; line-height: 1.6;
+    }
+    /* 代表挨拶 */
+    .greeting-wrap {
+      display: grid; grid-template-columns: 180px 1fr; gap: 3rem; align-items: start;
+      background: #fff; border-radius: 20px; padding: 2.8rem 3rem;
+      border: 1px solid rgba(143,191,154,.2); margin-top: 3rem;
+    }
+    .greeting-photo { text-align: center; }
+    .greeting-avatar {
+      width: 110px; height: 110px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--bg-sec) 0%, var(--accent-pl) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; margin: 0 auto 1rem;
+      border: 2px solid rgba(143,191,154,.3);
+    }
+    .greeting-role { font-size: .67rem; letter-spacing: .15em; color: var(--accent-dk); font-weight: 600; text-transform: uppercase; display: block; }
+    .greeting-name { font-family: 'Noto Serif JP', serif; font-size: 1rem; font-weight: 400; color: var(--text); margin-top: .3rem; }
+    .greeting-body { font-size: .88rem; line-height: 2.1; color: var(--text-lt); font-weight: 300; }
+    .greeting-sig {
+      font-size: .8rem; color: var(--text-lt); margin-top: 1.6rem; line-height: 1.9;
+      border-top: 1px solid rgba(143,191,154,.2); padding-top: 1rem;
+    }
+    .greeting-sig span { font-size: .97rem; color: var(--text); font-weight: 500; font-family: 'Noto Serif JP', serif; }
+    /* 理念・ビジョン */
+    .vision-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2rem;
+    }
+    .vision-card {
+      background: #fff; border-radius: 18px; padding: 2rem 1.8rem;
+      border: 1px solid rgba(143,191,154,.2); border-top: 3px solid var(--accent);
+    }
+    .vision-icon { font-size: 2rem; margin-bottom: .8rem; display: block; }
+    .vision-label { font-size: .62rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-dk); margin-bottom: .4rem; }
+    .vision-title { font-family: 'Noto Serif JP', serif; font-size: .97rem; font-weight: 400; color: #2e4a32; margin-bottom: .7rem; line-height: 1.6; }
+    .vision-body { font-size: .82rem; line-height: 1.95; color: var(--text-lt); font-weight: 300; }
+    /* 資格・認定 */
+    .certs-wrap {
+      background: #fff; border-radius: 18px; padding: 2.2rem 2rem;
+      border: 1px solid rgba(143,191,154,.2); margin-top: 2rem;
+    }
+    .certs-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
+    .cert-item { text-align: center; padding: 1.2rem .8rem; }
+    .cert-icon { font-size: 2rem; display: block; margin-bottom: .6rem; }
+    .cert-name { font-size: .85rem; font-weight: 600; color: var(--accent-dk); margin-bottom: .35rem; line-height: 1.4; }
+    .cert-desc { font-size: .73rem; line-height: 1.7; color: var(--text-lt); font-weight: 300; }
+    /* 会社概要 */
+    .company-wrap {
+      background: #fff; border-radius: 18px; overflow: hidden;
+      border: 1px solid rgba(143,191,154,.2); margin-top: 2rem;
+    }
+    .company-table { width: 100%; border-collapse: collapse; }
+    .company-table th {
+      width: 140px; padding: 1rem 1.5rem; text-align: left;
+      font-size: .78rem; font-weight: 600; color: var(--accent-dk);
+      background: rgba(143,191,154,.07);
+      border-bottom: 1px solid rgba(143,191,154,.15);
+      vertical-align: top; white-space: nowrap;
+    }
+    .company-table td {
+      padding: 1rem 1.5rem; font-size: .87rem; color: var(--text);
+      font-weight: 300; line-height: 1.8;
+      border-bottom: 1px solid rgba(143,191,154,.15);
+    }
+    .company-table tr:last-child th,
+    .company-table tr:last-child td { border-bottom: none; }
+    /* aboutセクション内の小見出し */
+    .about-block { margin-top: 4rem; }
+    .about-block-header { text-align: center; margin-bottom: 0; }
+
     /* ── HAMBURGER ── */
     .nav-hamburger {
       display: none; flex-direction: column; justify-content: center;
@@ -558,6 +651,12 @@
       .nav-tel  { display: none; }
       .nav-cta  { display: none; }
       .nav-hamburger { display: flex; }
+      .greeting-wrap { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem; }
+      .greeting-photo { display: flex; align-items: center; gap: 1.2rem; }
+      .greeting-avatar { width: 80px; height: 80px; font-size: 2.2rem; margin: 0; }
+      .vision-grid { grid-template-columns: 1fr; max-width: 460px; margin: 2rem auto 0; }
+      .about-teaser-cards { grid-template-columns: 1fr; max-width: 360px; }
+      .certs-grid { grid-template-columns: repeat(2,1fr); }
       .sec { padding: 4rem 1.4rem; }
       .features-grid, .staff-grid, .cases-grid { grid-template-columns: 1fr; max-width: 460px; margin-left: auto; margin-right: auto; }
       .symptoms-grid { grid-template-columns: repeat(2,1fr); }
@@ -607,6 +706,9 @@
       .area-label { width: auto; }
       .nav-logo { font-size: .95rem; }
       .announce { font-size: .67rem; }
+      .certs-grid { grid-template-columns: 1fr; }
+      .company-table th { width: 90px; padding: .8rem 1rem; font-size: .73rem; }
+      .company-table td { padding: .8rem 1rem; font-size: .82rem; }
       .dx-section { padding: 2.5rem 1rem; }
     }
   </style>
@@ -626,6 +728,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#philosophy">想い</a></li>
+    <li><a href="#about">私たちについて</a></li>
     <li><a href="#symptoms">対応症状</a></li>
     <li><a href="#features">特徴</a></li>
     <li><a href="#cases">利用例</a></li>
@@ -646,6 +749,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <ul>
     <li><a href="#philosophy" class="mobile-link">想い</a></li>
+    <li><a href="#about" class="mobile-link">私たちについて</a></li>
     <li><a href="#symptoms"   class="mobile-link">対応症状</a></li>
     <li><a href="#features"   class="mobile-link">特徴</a></li>
     <li><a href="#cases"      class="mobile-link">利用例</a></li>
@@ -685,12 +789,16 @@
   <div class="sec-inner sec-center">
     <span class="eyebrow reveal">私たちの想い</span>
     <h2 class="heading reveal">「フィルケア」に<br>込めた意味</h2>
-    <p class="body-text center reveal" style="max-width:680px">
-      「フィルケア（FILL CARE）」には、人生を安心と喜びで満たしていきたい、という想いを込めています。<br>
-      <span style="color:var(--text-lt);font-size:.88rem;line-height:2.2;display:block">
-        日々の生活の中に、少しずつ安心と穏やかな時間を増やしていけるよう、関わらせていただきたい。<br>
-        訪問看護を通して、利用者様の日々の生活が少しでも穏やかに、そして前向きなものになるよう支えていくことが、私たちの使命です。
-      </span>
+    <p class="body-text center reveal" style="max-width:640px;margin:0 auto 1.4rem">
+      「フィルケア（FILL CARE）」には、<br>
+      人生を安心と喜びで満たしていきたい、という想いを込めています。
+    </p>
+    <p class="body-text center reveal" style="max-width:620px;margin:0 auto;color:var(--text-lt);font-size:.88rem;line-height:2.3">
+      日々の生活の中に、少しずつ安心と穏やかな時間を<br>
+      増やしていけるよう、関わらせていただきたい。<br>
+      訪問看護を通して、利用者様の日々の生活が<br>
+      少しでも穏やかに、そして前向きなものになるよう<br>
+      支えていくことが、私たちの使命です。
     </p>
 
     <div class="fill-care-meaning reveal">
@@ -744,6 +852,43 @@
     <a href="#area" class="tile-link">対応エリアを確認する</a>
   </div>
 </div>
+
+
+<!-- ABOUT TEASER -->
+<section class="sec about-teaser-section" id="about" style="background:#f0f7f1;border-top:1px solid rgba(143,191,154,.25);border-bottom:1px solid rgba(143,191,154,.25)">
+  <div class="sec-inner sec-center">
+    <span class="eyebrow reveal">私たちについて</span>
+    <h2 class="heading reveal">フィルケアを<strong>もっと知る</strong></h2>
+    <p class="body-text center reveal" style="max-width:620px;margin:0 auto 2.5rem">
+      人生を安心と喜びで満たしていきたい、という想いからフィルケアは生まれました。<br><br>
+      利用者様が住み慣れた地域で、その人らしく過ごし続けられるよう、<br>
+      疾患や障害だけに目を向けるのではなく、その人が大切にしている<br>
+      想いや価値観に寄り添うことを大切にしています。
+    </p>
+    <div class="about-teaser-cards reveal">
+      <div class="atc-card">
+        <span class="atc-icon">👨‍⚕️</span>
+        <div class="atc-title">代表挨拶</div>
+        <div class="atc-body">訪問看護への想いをお伝えします。</div>
+      </div>
+      <div class="atc-card">
+        <span class="atc-icon">🌿</span>
+        <div class="atc-title">理念・ビジョン</div>
+        <div class="atc-body">「満たす、ケアを。」フィルケアが大切にするミッション・ビジョン・バリュー。</div>
+      </div>
+      <div class="atc-card">
+        <span class="atc-icon">🏢</span>
+        <div class="atc-title">会社概要</div>
+        <div class="atc-body">事業所名・所在地・連絡先など、フィルケアの基本情報をご確認いただけます。</div>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:2.5rem">
+      <a href="about.html" class="btn-solid" style="font-size:1rem;padding:1rem 3rem">
+        私たちについて、詳しく見る →
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- SYMPTOMS -->
 <section class="sec" style="background:var(--bg-sec)" id="symptoms">
@@ -845,7 +990,7 @@
     <h2 class="heading reveal">訪問看護は<strong>保険が使えます</strong></h2>
     <p class="body-text center reveal">
       精神科訪問看護は<strong style="color:#2e4a32">医療保険</strong>が適用されます。自己負担は1〜3割ですが、<br>
-      「週3回通ったら毎月いくらかかるの…？」という不安は当然だと思います。<br>
+      「週3回利用したら毎月いくらかかるの…？」という不安は当然だと思います。<br>
       でも、<strong style="color:#9a6e10">自立支援医療（精神通院）</strong>を申請すれば<strong style="color:#9a6e10">月額に上限</strong>が設けられ、<br>
       安心して継続して利用することができます。
     </p>
@@ -882,7 +1027,7 @@
         ※主治医（精神科・心療内科）が発行する「訪問看護指示書」があれば医療保険が適用されます。
       </div>
       <div class="monthly-concern reveal">
-        <div class="mc-head"><span class="mc-icon">🤔</span><span class="mc-title">週3回通うと、月の負担はどのくらい？</span></div>
+        <div class="mc-head"><span class="mc-icon">🤔</span><span class="mc-title">週3回利用すると、月の負担はどのくらい？</span></div>
         <div class="mc-body">
           <p style="font-size:.82rem;color:var(--text-lt);margin-bottom:1.2rem;font-weight:300">週3回・月12回ご利用した場合の概算（自立支援医療なし）</p>
           <div class="mc-grid">
@@ -1046,6 +1191,8 @@
     </span>
     <ul class="footer-nav">
       <li><a href="#philosophy">想い</a></li>
+      <li><a href="#about">私たちについて</a></li>
+    <li><a href="#about">私たちについて</a></li>
       <li><a href="#symptoms">対応症状</a></li>
       <li><a href="#features">特徴</a></li>
       <li><a href="#cases">利用例</a></li>
