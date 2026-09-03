@@ -18,7 +18,7 @@ var FILLCARE_NEWS = [
   { slug: "jiritsushien-shinsei", date: "2026-08-01", cat: "制度のこと", title: "自立支援医療（精神通院）の申請方法", published: true },
   { slug: "koufun-bougen-case", date: "2026-08-01", cat: "連携の方へ", title: "興奮や暴言がみられるケースへの訪問看護", published: true },
   { slug: "obon-2026", date: "2026-08-03", cat: "お知らせ", title: "お盆期間の営業についてのご案内", published: true },
-  { slug: "hoken-tsukaiwake", date: "2026-09-01", cat: "制度のこと", title: "訪問看護は医療保険？ 介護保険？ どちらを使うのか", published: false },
+  { slug: "hoken-tsukaiwake", date: "2026-09-01", cat: "制度のこと", title: "訪問看護は医療保険？ 介護保険？ どちらを使うのか", published: true },
   { slug: "taiou-case", date: "2026-10-01", cat: "連携の方へ", title: "お受けできるケース一覧（ケアマネジャー・退院支援ご担当の方へ）", published: false },
   { slug: "touki-utsu", date: "2026-11-02", cat: "季節の話題", title: "冬になると落ち込む ― 季節性感情障害（冬季うつ）をご存じですか", published: false },
   { slug: "nenmatsu-nenshi-2026", date: "2026-12-01", cat: "お知らせ", title: "年末年始の営業についてのご案内", published: false },
